@@ -24,12 +24,18 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-//Load .env file
-var dotenv = require('dotenv');
-dotenv.load();
+//Moment
+var moment = require('moment');
 
+//Load .env file
+//var dotenv = require('dotenv');
+//dotenv.load();
+
+// routes (for api) configuration
+var api = require('./routes/api');
 // routes ======================================================================
 require('./routes/auth.js')(app, passport); // load our routes and pass in our app and fully configured passport
+app.use('/api', api);
 
 
 app.listen(3000);

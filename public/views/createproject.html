@@ -1,0 +1,63 @@
+<div class="jumbotron">
+    <form>
+        <fieldset class="form-group">
+            <div class="row">
+                <div class="col-lg-5">
+                    <label>Project Name</label>
+                    <input type="text" placeholder="Project Name" class="form-control" ng-model="project.name">
+                </div>
+                <div class="col-lg-4">
+                    <label>Client Name</label>
+                    <input type="text" placeholder="Last Date on Job" class="form-control" ng-model="project.date">
+                </div>
+                <div class="col-lg-3">
+                    <label>Project State</label>
+                    <input type="text" placeholder="Project State" class="form-control" ng-model="project.state">
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="form-group">
+            <div class="row">
+                <div class="col-lg-5">
+                    <label>Client Name</label>
+                    <input type="text" placeholder="Client Name" class="form-control" ng-model="project.client.name">
+                </div>
+                <div class="col-lg-4">
+                    <label>Client Address</label>
+                    <input type="text" placeholder="Client Address" class="form-control" ng-model="project.client.address">
+                </div>
+                <div class="col-lg-3">
+                    <label>Client City</label>
+                    <input type="text" placeholder="Client City" class="form-control" ng-model="project.client.city">
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="form-group">
+            <label>Notes on the Project</label>
+            <textarea class="form-control" ng-model="project.description" rows="3"></textarea>
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" class="form-control-file" id="exampleInputFile">
+            <small class="text-muted">Any documents that might be associated with the project</small>
+        </fieldset>
+        <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                Construction Project
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                Oil and Gas Project
+            </label>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox"> Verified Info
+            </label>
+        </div>
+        <button class="btn btn-primary" ng-click="projSubmit(project)">Submit</button>
+    </form>
+</div>

@@ -5,6 +5,9 @@ app.config(function($routeProvider) {
     .when('/home', {
       templateUrl: 'views/home.html'
     })
+    .when('/dashboard', {
+      templateUrl: 'dashboard.html'
+    })
     .when('/login', {
       templateUrl: 'views/login.html',
       controller: 'LoginCtrl'
@@ -19,7 +22,15 @@ app.config(function($routeProvider) {
         logincheck: checkLoggedin
       }
     })
-    .otherwise({
+    .when('/createproject', {
+      templateUrl: 'views/createproject.html',
+      controller: 'CreateProjCtrl'
+    })
+    .when('/projectlist', {
+      templateUrl: 'views/projectlist.html',
+      controller: 'ProjListCtrl'
+    })
+      .otherwise({
       redirectTo: '/home'
     })
 });
